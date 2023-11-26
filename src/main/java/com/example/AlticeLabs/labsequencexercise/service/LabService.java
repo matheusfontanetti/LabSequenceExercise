@@ -6,6 +6,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class LabService {
 
+    /**
+     * Calculate the labSeq
+     * @param n
+     * @return labSeq calculated
+     */
     @Cacheable("labSeq")
     public long calculateLabSeq(int n) {
         if (n == 0) return 0;

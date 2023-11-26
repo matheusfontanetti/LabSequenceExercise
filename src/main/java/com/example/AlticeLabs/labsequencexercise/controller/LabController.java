@@ -14,6 +14,11 @@ public class LabController {
     @Autowired
     private LabService labSeqService;
 
+    /**
+     * call the service to calculate the labSeq
+     * @param n
+     * @return labservice.calculateLabSeq
+     */
     @GetMapping("/{n}")
     public long getLabSeqValue(@PathVariable int n) {
         return labSeqService.calculateLabSeq(n);
