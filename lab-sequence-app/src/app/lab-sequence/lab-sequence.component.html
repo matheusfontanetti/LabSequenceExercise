@@ -1,0 +1,12 @@
+<!-- src/app/lab-sequence/lab-sequence.component.html -->
+
+<div>
+  <label for="inputValue">Enter a number:</label>
+  <input type="number" id="inputValue" [(ngModel)]="inputValue" />
+  <button (click)="calculateLabSeq()">Calculate Lab Sequence</button>
+</div>
+
+<div *ngIf="labSeqValue !== undefined">
+  <p>Lab Sequence Value: {{ labSeqValue }}</p>
+</div>
+
